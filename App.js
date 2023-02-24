@@ -6,6 +6,7 @@ import Home from "./src/screens/Home";
 import { useFonts, WorkSans_400Regular } from "@expo-google-fonts/work-sans";
 import { Nunito_700Bold } from "@expo-google-fonts/nunito";
 import About from './src/screens/About';
+import UserData from './src/screens/UserData';
 
 export default function App() {
   const Stack = createNativeStackNavigator();
@@ -24,7 +25,7 @@ export default function App() {
           }}>
           {(props) => <Home {...props} channelName={"Education Hub"} />}
         </Stack.Screen>
-        
+
          {/* About Screen  */}
          <Stack.Screen
           name="About"
@@ -34,6 +35,20 @@ export default function App() {
               fontSize: 25,
               fontFamily: "Nunito_700Bold",
             },
+            headerTitleAlign: "center",
+          }}
+        />
+
+        {/* UserData Screen  */}
+        <Stack.Screen
+          name="Student"
+          component={UserData}
+          options={{
+            headerTitleStyle: {
+              fontSize: 25,
+              fontFamily: "Nunito_700Bold",
+            },
+            headerTitle: "Students Data",
             headerTitleAlign: "center",
           }}
         />

@@ -3,6 +3,9 @@ import { StyleSheet, Text, View } from 'react-native';
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import Home from "./src/screens/Home";
+import { useFonts, WorkSans_400Regular } from "@expo-google-fonts/work-sans";
+import { Nunito_700Bold } from "@expo-google-fonts/nunito";
+import About from './src/screens/About';
 
 export default function App() {
   const Stack = createNativeStackNavigator();
@@ -19,8 +22,21 @@ export default function App() {
           options={{
             headerShown: false,
           }}>
-          {(props) => <Home {...props} channelName={"Thapa Technical"} />}
+          {(props) => <Home {...props} channelName={"Education Hub"} />}
         </Stack.Screen>
+        
+         {/* About Screen  */}
+         <Stack.Screen
+          name="About"
+          component={About}
+          options={{
+            headerTitleStyle: {
+              fontSize: 25,
+              fontFamily: "Nunito_700Bold",
+            },
+            headerTitleAlign: "center",
+          }}
+        />
 
       </Stack.Navigator>
     </NavigationContainer>

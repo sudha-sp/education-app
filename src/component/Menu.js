@@ -9,7 +9,6 @@ const Menu = () => {
       <TouchableOpacity
         style={styles.buttonStyle}
         onPress={() => navigation.navigate("Course")}>
-        {/* <Text>Course</Text> */}
         <Image
           style={styles.iconStytle}
           source={{

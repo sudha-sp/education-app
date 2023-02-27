@@ -7,6 +7,8 @@ import { useFonts, WorkSans_400Regular } from "@expo-google-fonts/work-sans";
 import { Nunito_700Bold } from "@expo-google-fonts/nunito";
 import About from './src/screens/About';
 import UserData from './src/screens/UserData';
+import Course from './src/screens/Course';
+import Contact from './src/screens/Contact';
 
 export default function App() {
   const Stack = createNativeStackNavigator();
@@ -31,6 +33,7 @@ export default function App() {
           name="About"
           component={About}
           options={{
+            title:"About",
             headerTitleStyle: {
               fontSize: 25,
               fontFamily: "Nunito_700Bold",
@@ -49,6 +52,34 @@ export default function App() {
               fontFamily: "Nunito_700Bold",
             },
             headerTitle: "Students Data",
+            headerTitleAlign: "center",
+          }}
+        />
+
+        {/* Course Screen  */}
+        <Stack.Screen
+          name="Course"
+          component={Course}
+          options={{
+            headerTitleStyle: {
+              fontSize: 25,
+              fontFamily: "Nunito_700Bold",
+            },
+            headerTitle: "Courses",
+            headerTitleAlign: "center",
+          }}
+        />
+
+        {/* Course Screen  */}
+        <Stack.Screen
+          name="Contact"
+          component={Contact}
+          options={{
+            headerTitleStyle: {
+              fontSize: 25,
+              fontFamily: "Nunito_700Bold",
+            },
+            headerTitle: "Contact",
             headerTitleAlign: "center",
           }}
         />

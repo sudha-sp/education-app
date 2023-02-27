@@ -54,8 +54,7 @@ const UserData = () => {
         showsHorizontalScrollIndicator={false}
         snapToAlignment={'start'}
         decelerationRate={'fast'}
-        snapToInterval={Dimensions.get('window').height}
-        showsVerticalScrollIndicator={false} />
+        snapToInterval={Dimensions.get('window').height} />
     </View>
   );
 };
@@ -73,7 +72,7 @@ const styles = StyleSheet.create({
     height: 450,
     backgroundColor: "#fff",
     borderRadius: 5,
-    marginHorizontal: 20,
+    marginHorizontal: 50,
   },
   bioDataContainer: {
     width: "100%",
